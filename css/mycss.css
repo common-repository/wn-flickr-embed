@@ -1,0 +1,645 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+/******************************** OLIVER ***********************************************/
+
+#preview {
+  padding: 20px 10px;
+}
+
+
+
+.input_text {
+  margin-top: 10px;
+}
+
+.input_text label {
+  float: left;
+  margin-top: 6px;
+}
+
+.show_shadow{
+  margin-top: 10px;
+  text-align: left;
+}
+
+.show_shadow label {
+  margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+.wn_fe_principal {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.main_content {
+  width: calc(100% - 300px);
+  float: left;
+}
+
+@media screen and (max-width: 650px) {
+  .main_content {
+    width: 100%;
+  }
+  .sidebar {
+    width: 100% !important;
+    margin: 0px;
+  }
+}
+
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.tablinks, .tablinks2 {
+  border-radius: 10px 10px 0px 0px;
+  height: 35px;
+  width: 200px !important;
+  
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #ddd;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  box-shadow: 0px 0px 2px #ababab;
+  width: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+  box-shadow: 0px 0px 2px #ababab;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: white;
+  box-shadow: 1px 1px 2px #ababab;
+  border: 1px solid #ababab;
+  border-style: solid solid none solid;
+}
+
+/* Style the tab content */
+.tabcontent, .tabcontent2 {
+  display: none; /*activo es block*/
+  border: 1px solid #ababab;
+  border-style: none solid solid solid;
+  background-color: white;
+  box-shadow: 0px 0px 3px #ababab;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 0px 10px 10px 10px;
+  padding-right: 1px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.active {
+  display: block;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+.activo_default {
+  display: block;
+}
+
+.columna1 {
+  /* background-color: #0fa552; */
+  position: relative;
+  float: left;
+  display: block;
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 10px;
+}
+.columna2 {
+  /* background-color: #0fa552; */
+  position: relative;
+  display: block;
+  float: left;
+  width: 50%;
+  padding-right: 10px;
+  padding-left: 5px;
+  padding-top: 10px;
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  .columna1 {
+    width: 100%;
+  }
+  .columna2 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .extra_margin {
+    margin-bottom: 200px;
+  }
+}
+
+.front_title label {
+  font-size: medium;
+  font-weight: 600;
+  display: block;
+}
+
+.front_title {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+
+.final {
+  clear: both;
+}
+
+
+/********************************************************************************************/
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 17px;
+  margin-top: 0px;
+  margin-right: 7px;
+}
+
+.switch_label {
+	margin-left: 5px;
+	display: block;
+	text-align: left;
+	float: left;
+	font-size: 15px;
+	font-family: "Open Sans";
+	font-weight: 500;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.chucho {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.chucho:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .chucho {
+  background-color: #007cba;
+}
+
+input:focus + .chucho {
+  box-shadow: 0 0 1px #007cba;
+}
+
+input:checked + .chucho:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.chucho.round {
+  border-radius: 17px;
+}
+
+.chucho.round:before {
+  border-radius: 50%;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.default_box {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #ababab;
+  border-style: none solid solid solid;
+  background-color: white;
+  box-shadow: 0px 0px 3px #ababab;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.sidebar {
+  float: left;
+  width: 260px;
+  margin-left: 10px;
+  padding-right: 15px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 0.5s ease;
+  padding-top: 10px;
+}
+
+.shortcode_save_box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 3px #2d2d2d;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.shortcode_save_box .shortcode {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.shortcode_save_box label {
+  font-size: large;
+}
+
+.shortcode {
+  text-align: center !important;
+}
+
+/**************************************************Oliver**********************************************************/
+
+
+.content_table {
+  display: block;
+  padding: 0px;
+  margin: 10px;
+}
+
+.flipboxes_table {
+  border-radius: 6px;
+}
+
+.flipboxes_table th label {
+  font-weight: 800;
+  font-size: 15px;
+  border-radius: 20px !important;
+}
+
+table {
+  margin-bottom: 20px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+td .content_shortcode {
+  padding: 0px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(102, 102, 102);
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.content_form {
+  display: inline-block;
+}
+
+.content_button_edit {
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: #007d60;
+  border: none;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+.content_button_edit:hover {
+  background-color: #005a45;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.content_button_delete {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: rgb(177, 0, 0);
+  border: none;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+.content_button_delete:hover {
+  background-color: rgb(148, 1, 1);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.add_new_image_hover {
+  display: block;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  transition: 0.5s ease;
+}
+
+.add_new_image_hover:hover {
+  background-color: #004e6c;
+  background-image: linear-gradient(to right, #003646, #034b4f);
+  cursor: pointer;
+  transition: 0.5s ease;
+  padding: 15px;
+}
+
+.add_new_image_hover:hover .border_interior {
+  border: 3px dotted #ffffff;
+  transition: 0.5s ease;
+}
+
+.add_new_image_hover:hover .border_interior svg {
+  fill: #ffffff;
+  transition: 0.5s ease;
+}
+
+.add_new_image_hover:hover .border_interior label {
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.border_interior {
+  display: block;
+  background-color: none;
+  padding: 60px;
+  border: 3px dotted #004e6c;
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.border_interior svg {
+  display: block;
+  width: 10%;
+  fill: #004e6c;
+  transition: 0.5s ease;
+}
+
+.border_interior label {
+  display: block;
+  font-size: 250%;
+  font-weight: 500;
+  color: #004e6c;
+  margin-top: 30px;
+  transition: 0.5s ease;
+}
+
+
+
+
+
+/*********************************************** Oliver Duong ******************************************/
+
+.inputs {
+  width: 100% !important;
+}
+
+.wn_fe_labels {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+
+.fetch_log {
+  width: 100%;
+  height: 200px;
+}
+
+.html_code {
+  width: 100%;
+  height: 500px;
+}
+
+.preview_html_code {
+  text-align: left;
+}
+
+.visual_preview{
+  text-align: left;
+  display: block;
+  border-top-left-radius: 0px;
+}
+
+.visual_preview label, .preview_html_code label {
+  margin-top: 10px;
+  display: block;
+  font-size: 18px;
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.copy_code_button {
+  padding: 0px 10px;
+}
+
+.copy_code_button_container {
+  display: block;
+  text-align: right;
+  margin: 10px 0px;
+}
+
+.wn_fe_img {
+  width: auto;
+  max-width: 100%
+}
+
+.select_width_label {
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.sidebar {  
+  margin-top: 53px;
+  display: block;
+  width: 290px !important;
+  float: left;
+  margin-left: 10px !important;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.sidebar label {  
+  font-size: 17px;
+}
+
+.sidebar input {  
+  margin-top: 10px;
+  width: 100%;
+}
+
+.submit_section {  
+  margin-top: 10px;
+  display: block;
+  float: left;
+  margin-left: 10px !important;
+  padding: 10px 30px !important;
+  text-align: center;
+}
+
+.submit_button {
+  all: unset;
+  display: block;
+  background-color: #007cba;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 6px 0px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.submit_button:hover {
+  background-color: #0070a8;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.fetch_button {
+  background-color: #d93434;
+}
+
+.fetch_button:hover {
+  background-color: #cc2424;
+}
+
+.save_settings_container {
+  display: block;
+  text-align: left;
+}
+
+.save_settings {
+  margin-top: 25px !important;
+  margin-left: 12px !important;
+}
+
+.wn_fl_header {
+	font-size: 50px;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 800;
+	display: block;
+	margin: 50px 0px;
+}
+
+.deactivated_submit {
+  background-color: #eaeaea;
+}
+
+.deactivated_submit:hover {
+  background-color: #eaeaea;
+}
+
+.inputs_to_right {
+  float: right;
+}
